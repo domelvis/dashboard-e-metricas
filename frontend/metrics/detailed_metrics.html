@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Métricas Detalhadas - Dashboard Metrics</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+      body { background-color: #f8f9fa; }
+      .custom-header { background-color: #2c3e50; color: white; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+      .card { border: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 12px; }
+      .table-responsive { border-radius: 12px; overflow-x: auto; }
+      th, td { white-space: nowrap; }
+    </style>
+  </head>
+  <body>
+    <header class="custom-header p-3 mb-4 d-flex justify-content-between align-items-center">
+      <h1 class="h3 mb-0">Dashboard Metrics</h1>
+      <nav>
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link text-white" href="/index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="/dashboard.html">Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="/about.html">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="/auth/login.html">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container">
+      <h2 class="text-center text-secondary mb-4">Métricas Detalhadas</h2>
+      
+      <section class="card p-4 mb-4">
+        <h3 class="card-title text-secondary mb-3">Gráfico de Desempenho</h3>
+        <div class="placeholder-glow">
+          <div class="placeholder bg-light rounded" style="height: 300px;"></div>
+        </div>
+        <p class="text-muted text-center mt-3">Gráfico dinâmico de métricas será exibido aqui.</p>
+      </section>
+
+      <section class="card p-4 mb-4">
+        <h3 class="card-title text-secondary mb-3">Dados Detalhados</h3>
+        <div class="table-responsive">
+          <table class="table table-hover table-striped">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Valor</th>
+                <th>Fonte</th>
+                <th>Data</th>
+                <th>Hora</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>1</td><td>$10.50</td><td>web</td><td>2025-09-22</td><td>10:30</td></tr>
+              <tr><td>2</td><td>$25.75</td><td>mobile</td><td>2025-09-21</td><td>14:45</td></tr>
+              <tr><td>3</td><td>$50.00</td><td>api</td><td>2025-09-21</td><td>09:00</td></tr>
+              <tr><td>4</td><td>$5.20</td><td>import</td><td>2025-09-20</td><td>18:10</td></tr>
+              <tr><td>5</td><td>$30.00</td><td>web</td><td>2025-09-20</td><td>12:20</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer class="text-center text-muted py-3">
+      <p class="mb-0">&copy; 2025 Dashboard Metrics. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
