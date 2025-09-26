@@ -14,7 +14,7 @@ services:
     ports:
       - "5432:5432"
 
-  # API Node.js (agora serve frontend também)
+  # API Node.js
   node-api:
     build: ./backend/node-api
     restart: unless-stopped
@@ -30,8 +30,17 @@ services:
       PORT: 3000
     ports:
       - "3000:3000"
+
+  # Servidor Web para Frontend (Nginx)
+  frontend:
+    image: nginx:alpine
+    restart: unless-stopped
+    ports:
+      - "80:80"
     volumes:
-      - ./frontend:/app/frontend  # Montar frontend no container
+      - ./frontend:/usr/share/nginx/html
+    depends_on:
+      - node-api
 
 volumes:
   postgres_data:

@@ -1,0 +1,30 @@
+{
+  "name": "dashboard-metrics-api",
+  "version": "1.0.0",
+  "description": "API de backend para o Dashboard de Métricas do Projeto Elvis 2025.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/node-api/server.js",
+    "dev": "nodemon backend/node-api/server.js"
+  },
+  "keywords": [
+    "express",
+    "postgresql",
+    "dashboard",
+    "swagger"
+  ],
+  "author": "Elvis",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.19.2",
+    "helmet": "^7.2.0",
+    "pg": "^8.11.5",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}

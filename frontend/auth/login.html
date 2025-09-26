@@ -38,5 +38,47 @@
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+      document.getElementById('login-form').addEventListener('submit', async function(event) {
+        event.preventDefault(); // Impede o envio padrão do formulário
+        
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        
+        // Crie o corpo da requisição com os dados do formulário
+        const loginData = {
+          email: email,
+          password: password
+        };
+        
+        try {
+          // Envie a requisição POST para o seu endpoint de login na API
+          const response = await fetch('http://localhost:3000/api/auth/login', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(loginData)
+          });
+          
+          const data = await response.json();
+          
+          if (response.ok) {
+            // Se o login for bem-sucedido
+            alert('Login bem-sucedido!');
+            // Armazene o token de autenticação e redirecione o usuário
+            localStorage.setItem('auth-token', data.token);
+            window.location.href = '/dashboard.html'; // Redireciona para a página do painel
+          } else {
+            // Se o login falhar
+            alert('Erro no login: ' + data.message);
+          }
+        } catch (error) {
+          alert('Erro de conexão com o servidor.');
+          console.error('Erro:', error);
+        }
+      });
+    </script>
   </body>
 </html>

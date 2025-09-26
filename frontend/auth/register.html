@@ -40,5 +40,47 @@
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+      document.getElementById('register-form').addEventListener('submit', async function(event) {
+        event.preventDefault(); // Impede o envio padrão do formulário
+        
+        const username = document.getElementById('username').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        
+        // Crie o corpo da requisição com os dados do formulário
+        const registrationData = {
+          username: username,
+          email: email,
+          password: password
+        };
+        
+        try {
+          // Envie a requisição POST para o seu endpoint de criação de usuário na API
+          const response = await fetch('http://localhost:3000/api/users', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(registrationData)
+          });
+          
+          const data = await response.json();
+          
+          if (response.ok) {
+            // Se o registro for bem-sucedido
+            alert('Conta criada com sucesso! Você já pode fazer login.');
+            window.location.href = 'login.html'; // Redireciona para a página de login
+          } else {
+            // Se o registro falhar (ex: email já existe)
+            alert('Erro no registro: ' + data.message);
+          }
+        } catch (error) {
+          alert('Erro de conexão com o servidor. Verifique se o servidor está rodando.');
+          console.error('Erro:', error);
+        }
+      });
+    </script>
   </body>
 </html>
