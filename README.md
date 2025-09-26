@@ -85,13 +85,12 @@ Fazer o push para a branch (git push origin feature/nova-funcionalidade).
 
 Abrir um Pull Request ✨.
 
-💌 Contato
-Juiz Elvis
+💌 Contato Elvis Marcelo pereira de souza
 
-E-mail: 📧 domelvis@gmail.com
+E-mail: 📧 elvishootsrockreggae@hotmail.com - djpetrelli239@gmail.com
 
 GitHub: 🔗https://github.com/domelvis
 
-LinkedIn: 🔗https://www.linkedin.com/in/elvis-marcelo-pereira-de-souza
+LinkedIn: 🔗https://www.linkedin.com/in/elvis-marcelo-pereira-de-souza-1690bb259/
 
 Feito com ❤️ por Dom Elvis.
